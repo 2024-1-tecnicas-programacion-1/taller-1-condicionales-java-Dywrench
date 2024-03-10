@@ -10,7 +10,20 @@ import java.util.Scanner;
 public class Triangulo {
     public static String evaluar(double a, double b, double c) {
         // TODO: Coloca aquí el código del ejercicio 7: Triángulos
-        return "";
+       String triangulo="";
+        if (a + b <= c || b + c <= a || c + a <= b){
+        triangulo="no es un triangulo valido";
+        }
+        else if (a==b && b==c){
+        triangulo="Triangulo equilatero";
+        }
+         else if (a == b || b == c || c == a) {
+            triangulo = "Triángulo isósceles";
+         }
+         else {
+            triangulo = "Triángulo escaleno";
+         }
+        return triangulo;
     }
     
     public static void main(String[] args) {
