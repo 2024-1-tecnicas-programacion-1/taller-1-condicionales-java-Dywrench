@@ -11,7 +11,14 @@ import java.util.Scanner;
 public class AnnosBisiestos {
     public static String evaluar(int anno){
         // TODO: Coloca aquí el código del ejercicio 2: Años bisiestos
-        return "";
+        String anio_bisiesto="";
+        if (anno%4==0 && (anno%100!=0 || anno%400==0)){
+        anio_bisiesto=" es bisiesto";
+    }
+    else{
+        anio_bisiesto=" no es bisiesto";
+    }
+        return anio_bisiesto;
     }
     
     public static void main(String[] args) {
@@ -20,7 +27,7 @@ public class AnnosBisiestos {
         int anno = lector.nextInt();
         
         String respuesta = evaluar(anno);
-        System.out.println(respuesta);
+        System.out.println(anno+respuesta);
     }
             
 }
